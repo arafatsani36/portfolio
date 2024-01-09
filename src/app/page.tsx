@@ -3,6 +3,7 @@ import About from '@/component/About/About'
 import Awards from '@/component/Awards/Awards'
 import Banner from '@/component/Banner/Banner'
 import Contact from '@/component/Contact/Contact'
+import Footer from '@/component/Footer/Footer'
 import Header from '@/component/Header/Header'
 import LeftSideBar from '@/component/LeftSideBar/LeftSideBar'
 import RightSideBar from '@/component/RightSideBar/RightSideBar'
@@ -12,7 +13,7 @@ import { motion } from "framer-motion"
 
 export default function Home() {
   return (
-    <div className=' w-full h-screen overflow-x-hidden'>
+    <div className=' w-full h-screen'>
       <Header></Header>
      
       <div className='w-full h-[88vh] xl:flex items-center gap-20 justify-between'>
@@ -31,6 +32,7 @@ export default function Home() {
           <Awards></Awards>
           <Works></Works>
           <Contact></Contact>
+          <Footer></Footer>
         </div>
           <motion.div 
           initial={{ opacity:0}}

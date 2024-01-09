@@ -1,11 +1,11 @@
 "use client"
 import React, { useEffect, useState, useRef } from 'react';
-import logo from '../../asserts/logo.png';
+import logo from '../../asserts/logo/logo.png';
 import Image from 'next/image';
 import { motion } from "framer-motion"
 import Link from 'next/link';
 import {FaFacebookF, FaInstagram } from "react-icons/fa";
-import { FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
+import { FaLinkedinIn, FaXTwitter, FaDownload } from "react-icons/fa6";
 import { LuGithub } from "react-icons/lu";
 import { MdClose } from 'react-icons/md';
 
@@ -38,7 +38,7 @@ const Header = () => {
         <div className='w-full h-20 lg:h-[12vh] sticky top-0 z-50 bg-slate-300 px-4 bg-bodyColor'>
           <div className='max-w-container h-full mx-auto py-1 flex justify-between items-center'>
             <motion.div initial={{opacity:0}} animate={{opacity:1}} transition={{ duration:0.05}}>
-                <Image src={logo} alt='' width={50} height={50}/>
+                <a href="#home"><Image src={logo} alt='' width={80} height={80}/></a>
             </motion.div>
              <div className='hidden mdl:inline-flex items-center gap-4'>
                 <ul className='flex items-center justify-center gap-5 z-auto'>
@@ -108,14 +108,14 @@ const Header = () => {
                   
                 </ul>
 
-               <a href="/public/Jakariah Hossain Sani-Web Developer Resume.pdf" target='_blank'>
+               <a href='/Jakariah Hossain Sani-Web Developer Resume.pdf' download>
                <motion.button
                 initial={{y: -10, opacity:0}}
                 animate={{y: -0,opacity:1}}
                 transition={{ duration:0.1}}
-                className=' px-4 py-2 text-textGreen border border-textGreen rounded-lg text-base font-semibold transition duration-300 hover:bg-hoverColor'
+                className=' px-4 py-2 text-textGreen border border-textGreen rounded-lg text-base font-semibold transition duration-300 hover:bg-hoverColor flex items-center'
                 >
-                Resume
+                Resume <FaDownload className="ml-2"/>
                </motion.button>
                </a> 
               

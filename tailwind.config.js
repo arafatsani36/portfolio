@@ -38,6 +38,7 @@ module.exports = {
       textBlue: "#1589FF",
       textBlack: "#000000",
       hoverColor: "rgba(100, 255, 218, 0.1 )",
+      errorBg: "#FEFCFC",
 
     },
 
