@@ -31,7 +31,7 @@ const Banner = () => {
                     initial={{y:10, opacity:0}}
                     animate={{y:0, opacity:1}}
                     transition={{ duration:0.5, delay:0.7}} 
-                    >I'm a <span className="secendare-text-color text-sm">
+                    >I am a <span className="secendare-text-color text-sm">
                         <TypeAnimation
                     sequence={[
                         // Same substring at the start will only be typed out once, initially
