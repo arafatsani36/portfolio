@@ -13,20 +13,20 @@ import { motion } from "framer-motion"
 
 export default function Home() {
   return (
-    <div className=' w-full h-screen'>
-      <Header></Header>
-     
-      <div className='w-full h-[88vh] xl:flex items-center gap-20 justify-between'>
+    <div>
+     <Header></Header>
+      <div className="flex">
         <motion.div
-        initial={{ opacity:0}}
-        animate={{opacity:1}}
-        transition={{ delay:0.5}} 
-        className=' hidden xl:inline-flex w-32 h-full fixed left-0 bottom-0'
+          initial={{ opacity:0}}
+          animate={{opacity:1}}
+          transition={{ delay:0.5}}  
+          className=" hidden xl:inline-flex w-[10%] h-full fixed left-0 bottom-0"
         >
           <LeftSideBar></LeftSideBar>
         </motion.div>
-        <div className='h-[88vh] mx-auto p-4'>
-          <Banner></Banner>
+
+        <div className="w-[78%] mx-auto ">
+         <Banner></Banner>
           <About></About>
           <Skill></Skill>
           <Awards></Awards>
@@ -34,15 +34,20 @@ export default function Home() {
           <Contact></Contact>
           <Footer></Footer>
         </div>
-          <motion.div 
-          initial={{ opacity:0}}
-          animate={{opacity:1}}
-          transition={{ delay:0.5}}
-          className=' hidden xl:inline-flex w-32 h-full fixed right-0 bottom-0'
-          >
-            <RightSideBar></RightSideBar>
-          </motion.div>
+
+        <motion.div 
+        className="hidden xl:inline-flex w-[10%] h-full fixed right-0 bottom-0"
+        initial={{ opacity:0}}
+        animate={{opacity:1}}
+        transition={{ delay:0.5}}
+        >
+        <RightSideBar></RightSideBar>
+        </motion.div>
+        
       </div>
+
+
+
     </div>
   )
 }

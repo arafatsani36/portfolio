@@ -13,38 +13,38 @@ const Header = () => {
     const ref = useRef<string | any>("");
     const [showMenu , setShowMenu] = useState(false);
 
-    const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-        debugger;
-        e.preventDefault();
-        console.log("handleScroll is called");
+     const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+       debugger;
+       e.preventDefault();
+       console.log("handleScroll is called");
 
-        const href = e.currentTarget.href;
-        const targetId = href.replace(/.*\#/, "");
-        const elem = document.getElementById(targetId)
-        elem?.scrollIntoView({
-            behavior: "smooth"
-        });
+       const href = e.currentTarget.href;
+       const targetId = href.replace(/.*\#/, "");
+       const elem = document.getElementById(targetId)
+       elem?.scrollIntoView({
+           behavior: "smooth"
+      });
 
 
-        const link = document.querySelectorAll(".navLink")
-        link.forEach((link) => {
-            link.classList.remove("active")
-        })
-        e.currentTarget.classList.add("active")
-    }
+       const link = document.querySelectorAll(".navLink")
+       link.forEach((link) => {
+           link.classList.remove("active")
+      })
+       e.currentTarget.classList.add("active")
+     }
 
    
     return (
-        <div className='w-full h-20 lg:h-[12vh] sticky top-0 z-50 bg-slate-300 px-4 bg-bodyColor'>
+        <div className='w-full lg:h-[12vh] sticky top-0 z-50 bg-slate-300 px-4 bg-bodyColor'>
           <div className='max-w-container h-full mx-auto py-1 flex justify-between items-center'>
             <motion.div initial={{opacity:0}} animate={{opacity:1}} transition={{ duration:0.05}}>
                 <a href="#home"><Image src={logo} alt='' width={80} height={80}/></a>
             </motion.div>
              <div className='hidden mdl:inline-flex items-center gap-4'>
                 <ul className='flex items-center justify-center gap-5 z-auto'>
-                  <Link
+                  <Link 
                    className='text-textDeep hover:text-textGreen cursor-pointer duration-200 transition text-base font-semibold navLink'
-                   href='#home' onClick={handleScroll}
+                   href='#home' onClick={handleScroll} 
                    >
                     <motion.li
                      initial={{y: -10, opacity:0}}
@@ -54,8 +54,7 @@ const Header = () => {
                     </motion.li>
                     </Link>
 
-                   <Link className='text-textDeep hover:text-textGreen cursor-pointer duration-200 transition text-base font-semibold navLink' href='#about' onClick={handleScroll}
-                   >
+                   <Link className='text-textDeep hover:text-textGreen cursor-pointer duration-200 transition text-base font-semibold navLink' href='#about' onClick={handleScroll}>
                     <motion.li
                     initial={{y: -10, opacity:0}}
                     animate={{y: -0,opacity:1}}
@@ -85,7 +84,7 @@ const Header = () => {
                     </motion.li>
                    </Link>
 
-                   <Link className='text-textDeep hover:text-textGreen cursor-pointer duration-200 transition text-base font-semibold navLink' href='#works'  onClick={handleScroll}>
+                   <Link className='text-textDeep hover:text-textGreen cursor-pointer duration-200 transition text-base font-semibold navLink' href='#works' onClick={handleScroll} >
                    <motion.li
                    initial={{y: -10, opacity:0}}
                    animate={{y: -0,opacity:1}}
@@ -308,7 +307,7 @@ const Header = () => {
 
             </div>
             
-          </div>
+        </div>
     );
 };
 
