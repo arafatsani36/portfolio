@@ -9,7 +9,7 @@ const notFound = () => {
             <div className='text-center'>
                 <Image src={errorImg} alt='' className=' w-32 mx-auto'/>
                 <h2 className=' font-bold text-lg mb-2'>404 Page Not Found</h2>
-                <p className='text-lg mb-6'>The page you are looking for doesn't exist or has been moved</p>
+                <p className='text-lg mb-6'>The page you are looking for doesnot exist or has been moved</p>
                 <a className=' p-2 border border-textBlack rounded-md hover:bg-bodyColor hover:text-textWhite cursor-pointer duration-200 transition flex w-36 mx-auto items-center' href="/"><FaArrowLeft className='mr-2'/> Back to home</a>
             </div>
         </div>
