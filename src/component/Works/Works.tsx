@@ -1,3 +1,5 @@
+
+import './Works.css'
 import React from 'react';
 import TitleSection from '../TitleSection/TitleSection';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';

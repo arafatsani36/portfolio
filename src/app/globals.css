@@ -84,15 +84,15 @@ ul li a{
 } 
 
 .works .worksBox.worksBox1{
-  background: url(../../../portfolio//src/asserts/works/job-linker.png);
+  background: url(../asserts/works/job-linker.png);
   background-size: cover;
 }
 .works .worksBox.worksBox2{
-   background: url(../../../portfolio//src/asserts/works/toy-sports-car.png);
+   background: url(../asserts/works/toy-sports-car.png);
    background-size: cover;
 }
 .works .worksBox3{
-   background: url(../../../portfolio//src/asserts/works/carenowhospitals.png);
+   background: url(../asserts/works/carenowhospitals.png);
    background-size: cover;
 }
 .works .box:hover{
